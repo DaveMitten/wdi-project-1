@@ -5,20 +5,24 @@ body {
   margin: 0px auto;
 }
 .runway {
-  background-color: red;
+  /*background-color: red;*/
+  border: 2px dotted red;
   height: 800px;
   position: relative;
 
 }
  .note {
   background-color: silver;
+  /*border: 2px*/
   height: 100px;
   width: 500px;
   position: absolute;
 }
 
 .end {
-  background-color: blue;
+  /*background-color: blue;*/
+  border: 2px dotted blue;
+
   position: absolute;
   bottom: 0%;
   height: 100px;
@@ -32,6 +36,6 @@ body {
 #start{
   background-color: green;
   height: 100px;
-  
+
 
 }
