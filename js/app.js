@@ -1,21 +1,11 @@
 // console.log('hi');
+$(document).ready(function(){
 
 
 // console.log(game);
-$('#start').on('click', function startDescent() {
-
-  var windowHeight = $(window).height();
-  var lineHeight = $('.note').height();
-  var desiredBottom = 0;
-
-  var newPosition = windowHeight - (lineHeight + desiredBottom);
-
-  $('.note').animate({top: newPosition}, 3000/*this is the pace*/, function animateDescent () {
-    $('.note').css({
-      bottom: desiredBottom,
-      top: 'auto'
-    });
-  });
-
+$('button').click(function startDescent() {
+  $('.note').animate({'top': '+=700px'});
+  // console.log('startDescent');
+});
 
 });
