@@ -44,6 +44,13 @@ Will need a while loop that whilst remaining true keeps looping and adding point
 will need a math.random to be created which decides which note div gets generated;
 Will need
 
+
+**ADDING AND REMOVING NOTE**
+once the button is removed i need to add it again to the top of '.runway div'. Then the animation needs to start again. and go continuously.
+
+
+
+
 **SCORING**
 click on the 'end div' to push the 'note div' value of 50 to player score empty array. only allow if 'note div' is within the limits of the 'end div' window
 
