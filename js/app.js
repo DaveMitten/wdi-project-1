@@ -9,16 +9,67 @@ $(document).ready(function(){
   // const top = $('.note')
 
 
+// while(){
+//
+// }
+
   const buttons = $('.buttons');
   const note = $('.note');
+  const start = $('.start');
   // const button = $('button');
   // const noteTop = note.top(700px;)
 
+// this  actually will start all
+  start.click(function (){
 
-  buttons.click(function (){
-    note.animate({'top': '+=700px'}, 3000);
-    let x = note.offset();
-    return(x.top);
+
+    note.animate({'top': '+=725px'}, 3000);
+
+    //this judges if you have hit the note of not by comparin the height
+    // if('.note.height()' === height(700px) ){
+    //   alert(true);
+    // } else{
+    //   alert(false);
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // alert(note.offset);
+
+    // if('.note'.height === 100){
+    //   alert('.note'.height());
+    // }
+    // let x = note.offset();
+    // return(x.top);
+
+//could use this as a function to drop note if needed
+
+ // $("button").click(function(){
+//     $("p").slideDown();
+// });
+
 
 //     let noteTop = note.postion.top
 //
