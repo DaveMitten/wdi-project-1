@@ -6,27 +6,35 @@ $(document).ready(function(){
 
   //then adde class at top and start sequence again
 
-  // const top = $('.note')
 
 
-// while(){
-//
-// }
 
-  const buttons = $('.buttons');
+
+
+  // const buttons = $('.buttons');
   const note = $('.note');
   const start = $('.start');
   // const button = $('button');
   // const noteTop = note.top(700px;)
 
-// this  actually will start all
+  // this  actually will start all
   start.click(function (){
 
 
-    note.animate({'top': '+=725px'}, 3000);
+
+    note.animate({'top': '+=735px'}, 1000, function(){
+      if(note.position().top > 700 && note.position().top < 800){
+        alert(true);
+        console.log(note.position().top);
+      } else{
+        alert(false);
+
+      }
+    });
+
 
     //this judges if you have hit the note of not by comparin the height
-    // if('.note.height()' === height(700px) ){
+    // if(note.height() > 700 && note.height() < 800){
     //   alert(true);
     // } else{
     //   alert(false);
