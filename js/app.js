@@ -1,44 +1,73 @@
 // console.log('hi');
 $(document).ready(function(){
-
-
-  //if button is clicked, perform action. Keep true untill the div reaches its targe of 700 px, when that happens, remove class.
-
-  //then adde class at top and start sequence again
-
-
-
-
-
-
-  // const buttons = $('.buttons');
   const note = $('.note');
   const start = $('.start');
-  // const button = $('button');
-  // const noteTop = note.top(700px;)
+  const end = $('.end');
+  let playerScore = [];
 
-  // this  actually will start all
+  //push note div value to array
+
+  end.on('click', function(){
+    console.log(end.on());
+    if(note.position().top > 700 && note.position().top < 800){
+      alert(true);
+      console.log(note.position().top);
+    }else {
+      alert(false);
+    }
+  });
+
+  // this will start the game
   start.click(function (){
 
 
-
-    note.animate({'top': '+=735px'}, 1000, function(){
-      if(note.position().top > 700 && note.position().top < 800){
-        alert(true);
-        console.log(note.position().top);
-      } else{
-        alert(false);
-
+    note.animate({'top': '+=800px'}, 2000, function(){
+      if(note.position().top === 800){
+        note.remove();
       }
     });
 
 
-    //this judges if you have hit the note of not by comparin the height
-    // if(note.height() > 700 && note.height() < 800){
-    //   alert(true);
-    // } else{
-    //   alert(false);
-    // }
+
+
+
+
+
+  });
+});
+
+
+//   if(note.position().top > 700 && note.position().top < 800){
+//     alert(true);
+//     console.log(note.position().top);
+//   } else{
+//     alert(false);
+//     note.remove();
+//   }
+//
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//this judges if you have hit the note of not by comparin the height
+// if(note.height() > 700 && note.height() < 800){
+//   alert(true);
+// } else{
+//   alert(false);
+// }
 
 
 
@@ -64,17 +93,17 @@ $(document).ready(function(){
 
 
 
-    // alert(note.offset);
+// alert(note.offset);
 
-    // if('.note'.height === 100){
-    //   alert('.note'.height());
-    // }
-    // let x = note.offset();
-    // return(x.top);
+// if('.note'.height === 100){
+//   alert('.note'.height());
+// }
+// let x = note.offset();
+// return(x.top);
 
 //could use this as a function to drop note if needed
 
- // $("button").click(function(){
+// $("button").click(function(){
 //     $("p").slideDown();
 // });
 
@@ -93,16 +122,14 @@ $(document).ready(function(){
 
 
 
-    // note.removeClass();
-    // if()
-  });
+// note.removeClass();
+// if()
+// });
 
-  // if(note === top = 700px){
-  //   note.removeClass();
+// if(note === top = 700px){
+//   note.removeClass();
 
-  // }
-
-
+// }
 
 
 
@@ -111,7 +138,6 @@ $(document).ready(function(){
 
 
 
-  // console.log('startDescent');
 
 
-});
+// console.log('startDescent');
