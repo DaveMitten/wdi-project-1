@@ -40,9 +40,10 @@ $(document).ready(function(){
       $('.note').eq(0).remove();
       Game.playerScore++;
       Game.score = $('.scoreBoard').html(`Score: ${Game.playerScore}`);
+    } // if you miss the note, stick a sound here taht ive downloaded of missed now!
+    //else {}
 
-      // console.log(Game.playerScore);
-    }
+
       // console.log(note);
   });
   // Game.$addScore = function(){

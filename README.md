@@ -92,7 +92,7 @@ When you die show high score
 **MAKE MORE CHANNELS**
 copy the current code that allows you to make a channel x 4
 allocate to different divs that will line up as collumns for the game.
- 
+
 
 
 **MAKE DIFFICULTY BUTTONS**
