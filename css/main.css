@@ -1,39 +1,128 @@
 * {
   box-sizing: border-box;
+
 }
 
 body {
-  background-color: black;
+  background-image: url('http://www.androidguys.com/wp-content/uploads/2016/04/8bit_wallpaper18.jpg');
   margin: 0 auto;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 75%;
+  width: 1024px;
+  border: 5px solid darkblue;
+  color: white;
+
+
+}
+h1 {
+  text-align: center;
+  /*background-color: blue;*/
+  margin: 30px auto;
+  width: 200px;
+  padding: 10px;
+  border: 5px dashed fuchsia;
 }
 
 .gameBoard {
-  background: red;
   margin: 0 auto;
   height: 800px;
-  width: 500px;
-}
+  width: 510px;
+  /*width: 50%;*/
 
-.runway {
-  background-color: blue;
+}
+.scoreBoard {
+  /*background: red;*/
+  margin: 0 auto;
+  height: 100px;
+  width: 210px;
+  /*width: 25%;*/
+  float: right;
+  border: 5px dashed fuchsia;
+  font-size: 20px;
+  padding: 12.5px;
+  margin-right: 20px;
+
+}
+.runway, .runway2, .runway3, .runway4, .runway5  {
+  /*background-color: lightblue;*/
+  /*background-color: black;*/
   height: 800px;
-  width: 500px;
+  width: 102px;
+  /*width: 20%;*/
   position: relative;
-}
+  float: left;
+  border-top: 9px dotted fuchsia;
 
-.note {
-  background-color: silver;
-  height: 50px;
-  width: 500px;
-  position: absolute;
-}
 
-.runway .end {
-  width: 500px;
+}
+.runway2 {
+  /*background-color: darkcyan;*/
+  /*background-color: black;*/
+}
+.runway3 {
+  /*background-color: blue;*/
+  /*background-color: black;*/
+
+}
+.runway4 {
+  /*background-color: darkblue;*/
+  /*background-color: black;*/
+
+}
+.runway5 {
+  /*background-color: fuchsia;*/
+  /*background-color: black;*/
+
+
+}
+.runway .end, .runway2 .end2, .runway3 .end3, .runway4 .end4, .runway5 .end5 {
+  width: 100px;
   height: 100px;
   position: absolute;
   bottom: 25px;
-  background: orange;
+  border: 10px dashed fuchsia;
+}
+
+.note {
+  background: radial-gradient(fuchsia, white, fuchsia); /* Standard syntax */
+;
+  height: 50px;
+  width: 125px;
+  position: absolute;
+  border-radius: 100%;
+  width: 50px;
+  margin: 0 auto;
+  margin-left: 30%;
+}
+.buttons{
+  margin: 0 auto;
+  height: 0px;
+  width: 0px;
+  margin-left: 65px;
+
+}
+
+
+.start, .easy, .medium, .hard, .score {
+  /*background-color: green;*/
+  height: 100px;
+  width: 125px;
+  /*width: 25%;*/
+  padding: 39px;
+  text-align: center;
+  /*float: left;*/
+  border-radius: 23px;
+  margin: 15px auto;
+  border: 5px dotted fuchsia;
+}
+.medium {
+  padding-left: 25px;
+}
+.start {
+  padding-left: 31px;
+}
+.easy, .hard {
+  padding-left: 34px;
 }
 
 
@@ -65,14 +154,3 @@ body {
   height: 100px;
   width: 500px;
 }*/
-
-.buttons{
-  background-color: green;
-}
-
-#start{
-  background-color: green;
-  height: 100px;
-
-
-}

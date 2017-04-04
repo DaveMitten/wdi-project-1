@@ -1,204 +1,95 @@
-// console.log('hi');
 $(document).ready(function(){
-  // $('body').append('<div class="runway"></div>');
-  // $('body').append('<div class="end"></div>');
-  // $('body').append('<div class= "buttons"></div>');
-  // $('body').append('<div class="score">score</div>');
-  // // $buttons.append('<button class= "start">start</button>');
 
+  var Game = Game || {};
 
-  // const $buttons = $('.buttons');
-  const $runway = $('.runway');
-  const $start = $('.start');
-  const $end = $('.end');
-  const $playerScore = [];
-//added the css into js now but i seem to have lost the position style and when i generate a new div under the class of note, the runway and note div bind and animate togeter. I want the note to animate individually.
-  // $runway.css({
-  //   'border': '2px dotted red',
-  //   'height': '850px',
-  //   'position': 'relative'});
-  // $end.css({
-  //   'border': '2px dotted blue',
-  //   'position': 'absolute',
-  //   'bottom': '10%',
-  //   'height': '100px',
-  //   'width': '500px'
-  // });
+  Game.$runway = $('.runway');
+  Game.$start = $('.start');
+  Game.$end = $('.end');
+  Game.playerScore = 0;
+  Game.score = $('.scoreBoard').html(`Score: ${Game.playerScore}`);
 
+//make the difficulty an object that can pull either Gsame.speed or Game.difficulty into the create note function//
+  // Game.difficultyEasy = {difficulty =
+  //   speed =
+  //   }
+  // Game.difficultyMedium ={difficulty =
+  //   speed =
+  //   }
+  // Game.difficultyHard ={difficulty =
+  //   speed =
+  //   }
+  Game.difficulty = 900;
+  Game.speed = 2000;
 
+  //this is the function taht allows the game to start
+  Game.$init = function(){
+    Game.$start.on('click', Game.$startGame);
+  };
+  //this creates the note and appends it to the runway
+  Game.$createNote = function (){
+    Game.$note = $('<div class="note"></div>');
+    Game.$runway.append(Game.$note);
+    Game.animate(Game.$note);
+  };
 
+  Game.$playerClick = Game.$end.click(function clickNote() {
+    // const note = $('.note');
+    const notePos = $('.note').position();
+    // const end = $('.end').position();
+    if(notePos.top >= 600 && notePos.top <= 810 ){
+      $('.note').eq(0).remove();
+      Game.playerScore++;
+      Game.score = $('.scoreBoard').html(`Score: ${Game.playerScore}`);
 
-
-  // this will start the game
-  $start.click(function (){
-    const $note = $('<div class="note"></div>');
-    $runway.append($note);
-    // const $note = $runway.append('<div class="note">note</div>');
-    // $note.css({
-    //   'background-color': 'silver',
-    //   /*border: 2px*/
-    //   'height': '50px',
-    //   'width': '500px',
-    //   'position': 'absolute'}
-    // );
-    $note.animate({'top': '+=810px'}, 2000, function(){
-      if($note.position().top > 800){
-        $note.remove();
-      }
-    });
-
-
-
-    //this allows ou to click on end and add
-
-    $end.on('click', function(){
-      // console.log(end.on());
-      if($note.position().top > 665 && $note.position().top < 765){
-        // alert(true);
-        console.log($note.position().top);
-        $playerScore.push('50');
-        alert($playerScore);
-        $note.remove();
-      }else {
-        // alert(false);
-        $note.remove();
-        alert('bad move');
-      }
-    });
-
-
-
-
-
+      // console.log(Game.playerScore);
+    }
+      // console.log(note);
   });
+  // Game.$addScore = function(){
+  //   if(Game.$playerClick === true){
+  //     // Game.playerScore++;
+  //     // $('.scoreBoard').html(`Score: ${Game.playerScore}`);
+  //     // Game.playerScore.push('50');
+  //     // console.log('Game.playerScore');
+  //   }
+  // };
+
+  //this creates a note and gives it a speed...
+  Game.$startGame = function(){
+    setInterval(Game.$createNote, Game.difficulty);
+  };
+
+  Game.animate = function(){
+    // console.log($notes);
+    Game.$note.animate({'top': '+=810px'}, {
+      duration: Game.speed,
+      step: Game.positionCheck
+    });
+  };
+
+  Game.positionCheck = function() {
+    // console.log($(this).position().top);
+    if($(this).position().top > 800){
+      $(this).remove();
+    }
+  };
+
+    // Game.$end.click(function clickNote(){
+  //   console.log('hi');
+  //   if(Game.$note.position().top > 675 && Game.$note.position().top < 775){
+  //     // alert(true);
+  //     console.log(Game.$note.position().top);
+  //     Game.$playerScore.push('50');
+  //     // alert($playerScore);
+  //     Game.$note.remove();
+  //   }else {
+  //     // alert(false);
+  //     Game.$note.remove();
+  //     alert('bad move');
+  //   }
+  //
+  //
+  // });
+//i call on the function here...
+  $(Game.$init);
 });
-
-
-//   if(note.position().top > 700 && note.position().top < 800){
-//     alert(true);
-//     console.log(note.position().top);
-//   } else{
-//     alert(false);
-//     note.remove();
-//   }
-//
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//this judges if you have hit the note of not by comparin the height
-// if(note.height() > 700 && note.height() < 800){
-//   alert(true);
-// } else{
-//   alert(false);
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// alert(note.offset);
-
-// if('.note'.height === 100){
-//   alert('.note'.height());
-// }
-// let x = note.offset();
-// return(x.top);
-
-//could use this as a function to drop note if needed
-
-// $("button").click(function(){
-//     $("p").slideDown();
-// });
-
-
-//     let noteTop = note.postion.top
-//
-//     $(document).scroll(function() {
-//   var y = $(this).scrollTop();
-//   if (y > 800) {
-//     $('.bottomMenu').fadeIn();
-//   } else {
-//     $('.bottomMenu').fadeOut();
-//   }
-// });
-
-
-
-
-// note.removeClass();
-// if()
-// });
-
-// if(note === top = 700px){
-//   note.removeClass();
-
-// }
-
-
-
-
-
-
-
-
-
-
-// console.log('startDescent');
-
-
-
-$(init);
-
-let difficulty = 1000;
-
-
-function init() {
-  $('.start').on('click', startGame);
-}
-
-function startGame() {
-  setInterval(appendNote, difficulty)
-}
-
-function appendNote() {
-  const $note = $('<div class="note"></div>');
-  $runway.append($note);
-  animateNote($note);
-}
-
-function animateNote(note) {
-}

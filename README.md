@@ -75,10 +75,33 @@ var player1 = []
 
 
 
+**NEXT STEP**
+now that the notes are falling down, the project is inside of an object and the start button is starting it off. I need to make it possible to click on a bar and add it to my score.
+
+This has several parts.
+
+1.) register the bar clicking. **done**
+2.)register a click on  a note.
+3.) send a value to the console.
+4.)record value in an array
+
+**ADD VALUE TO HIGH SCORE WINDOW**
+display this on the right
+When you die show high score
+
+**MAKE MORE CHANNELS**
+copy the current code that allows you to make a channel x 4
+allocate to different divs that will line up as collumns for the game.
+ 
+
+
+**MAKE DIFFICULTY BUTTONS**
+
+first of all, need to create three buttons? or a drop down? Buttons probably more game like.
 
 
 
-need to use jquery animate
+
 
 
 
