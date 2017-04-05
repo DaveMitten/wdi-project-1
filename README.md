@@ -138,3 +138,15 @@ font-family: 'Press Start 2P', cursive;
 <style>
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 </style>
+
+
+
+**NEXT MOVE**
+
+connect the score to the score board **DONE**
+
+after 5 balls drop game over - this triggers a div to pop up saying game over + game score
+
+add difficulty buttons [select the button either E, M or D then that allows you to select start]
+
+add sound 

@@ -13,6 +13,7 @@ body {
   color: ghostwhite;
   height: 946px;
   margin-top: 50px;
+  position: relative;
 
 
 }
@@ -43,8 +44,24 @@ h1 {
   font-size: 20px;
   padding: 10px;
   margin-right: 20px;
-
 }
+.gameOver{
+  margin: 0 auto;
+  height: 245px;
+  width: 539px;
+  /*width: 25%;*/
+  border: 10px dashed fuchsia;
+  font-size: 50px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1000;
+  text-align: center;
+  bottom: 445px;
+  right: 215px;
+}
+
+
+
 .runway {
   /*background-color: lightblue;*/
   /*background-color: black;*/
