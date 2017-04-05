@@ -9,8 +9,10 @@ body {
   font-family: 'Press Start 2P', cursive;
   font-size: 75%;
   width: 1024px;
-  border: 5px solid darkblue;
-  color: white;
+  border: 5px dashed dodgerblue;
+  color: ghostwhite;
+  height: 946px;
+  margin-top: 50px;
 
 
 }
@@ -75,12 +77,26 @@ h1 {
 
 
 }
+.endBoard{
+  width: 500px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  bottom: 200px;
+
+}
+
 .end{
+  float: left;
   width: 100px;
   height: 100px;
-  position: absolute;
-  bottom: 25px;
-  border: 10px dashed fuchsia;
+  position: relative;
+  border: 10px groove fuchsia;
+  display: inline-block;
+  text-align: center;
+  font-size: 28px;
+  padding: 30px;
 }
 
 .note {

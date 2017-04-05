@@ -6,8 +6,8 @@ Game.init = function(){
   Game.$end         = $('.end');
   Game.playerScore  = 0;
   Game.playerLives  = 5;
-  Game.difficulty   = 900;
-  Game.speed        = 10000;
+  Game.difficulty   = 1000;
+  Game.speed        = 1000;
   Game.score        = $('.scoreBoard').html(`Score: ${Game.playerScore}`);
 
   Game.$start.on('click', Game.startGame);
@@ -15,7 +15,7 @@ Game.init = function(){
 
 Game.startGame = function(){
   Game.keyPress();
-  Game.interval = setTimeout(Game.$createNote, Game.difficulty);
+  // Game.interval = setInterval(Game.$createNote, Game.difficulty);
 };
 
 Game.chooseRandomRunway = function() {
