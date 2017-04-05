@@ -43,7 +43,7 @@ h1 {
   margin-right: 20px;
 
 }
-.runway, .runway2, .runway3, .runway4, .runway5  {
+.runway {
   /*background-color: lightblue;*/
   /*background-color: black;*/
   height: 800px;
@@ -55,27 +55,27 @@ h1 {
 
 
 }
-.runway2 {
+#runway2 {
   /*background-color: darkcyan;*/
   /*background-color: black;*/
 }
-.runway3 {
+#runway3 {
   /*background-color: blue;*/
   /*background-color: black;*/
 
 }
-.runway4 {
+#runway4 {
   /*background-color: darkblue;*/
   /*background-color: black;*/
 
 }
-.runway5 {
+#runway5 {
   /*background-color: fuchsia;*/
   /*background-color: black;*/
 
 
 }
-.runway .end, .runway2 .end2, .runway3 .end3, .runway4 .end4, .runway5 .end5 {
+.end{
   width: 100px;
   height: 100px;
   position: absolute;

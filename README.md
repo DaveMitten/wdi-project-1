@@ -104,6 +104,14 @@ first of all, need to create three buttons? or a drop down? Buttons probably mor
 
 
 
+**rane**
+
+difficulty buttons,
+present score when finished (alert window styled?)
+*setInterval(function(){ alert("Hello"); }, 3000);
+var randomNumber = Math.floor(Math.random()*textArray.length);**
+
+either a swtich statement that goes between cases (runway) to see which one gets a note placed on it
 
 
 

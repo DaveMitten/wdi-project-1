@@ -3,6 +3,8 @@ $(document).ready(function(){
   var Game = Game || {};
 
   Game.$runway = $('.runway');
+
+
   Game.$start = $('.start');
   Game.$end = $('.end');
   Game.playerScore = 0;
@@ -19,16 +21,24 @@ $(document).ready(function(){
   //   speed =
   //   }
   Game.difficulty = 900;
-  Game.speed = 2000;
+  Game.speed      = 2000;
 
   //this is the function taht allows the game to start
   Game.$init = function(){
     Game.$start.on('click', Game.$startGame);
   };
   //this creates the note and appends it to the runway
+
+  // Game.randomRunway = function(){
+  //
+  // }
+
+
   Game.$createNote = function (){
+    Game.interval = setTimeout(Game.$createNote, Game.difficulty);
+
     Game.$note = $('<div class="note"></div>');
-    Game.$runway.append(Game.$note);
+    $(Game.chooseRandomRunway()).append(Game.$note);
     Game.animate(Game.$note);
   };
 
@@ -39,6 +49,7 @@ $(document).ready(function(){
     if(notePos.top >= 600 && notePos.top <= 810 ){
       $('.note').eq(0).remove();
       Game.playerScore++;
+      // Game.difficulty = Game.difficulty - 100;
       Game.score = $('.scoreBoard').html(`Score: ${Game.playerScore}`);
     } // if you miss the note, stick a sound here taht ive downloaded of missed now!
     //else {}
@@ -57,8 +68,14 @@ $(document).ready(function(){
 
   //this creates a note and gives it a speed...
   Game.$startGame = function(){
-    setInterval(Game.$createNote, Game.difficulty);
+    Game.interval = setTimeout(Game.$createNote, Game.difficulty);
+    // Game.chooseRandomRunway();
   };
+
+  Game.chooseRandomRunway = function() {
+    return $($('.runway')[Math.floor(Math.random()*$('.runway').length)]).click();
+  };
+
 
   Game.animate = function(){
     // console.log($notes);
