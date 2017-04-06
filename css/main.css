@@ -59,6 +59,19 @@ h1 {
   bottom: 445px;
   right: 215px;
 }
+.start {
+margin: 0 auto;
+height: 245px;
+width: 590px;
+border: 10px dashed fuchsia;
+font-size: 50px;
+padding: 10px;
+position: absolute;
+z-index: 1000;
+text-align: center;
+bottom: 445px;
+right: 200px;
+}
 
 
 
@@ -127,23 +140,21 @@ h1 {
   margin: 0 auto;
   margin-left: 30%;
 }
-.buttons{
+/*.buttons{
   margin: 0 auto;
   height: 0px;
   width: 0px;
   margin-left: 65px;
 
-}
+}*/
 
 
-.start, .easy, .medium, .hard, .score {
-  /*background-color: green;*/
+/*.start,
+.easy, .medium, .hard, .score {
   height: 100px;
   width: 125px;
-  /*width: 25%;*/
   padding: 39px;
   text-align: center;
-  /*float: left;*/
   border-radius: 23px;
   margin: 15px auto;
   border: 5px dotted fuchsia;
@@ -156,7 +167,7 @@ h1 {
 }
 .easy, .hard {
   padding-left: 34px;
-}
+}*/
 
 
 
