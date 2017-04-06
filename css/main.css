@@ -2,7 +2,6 @@
   box-sizing: border-box;
 
 }
-
 body {
   background-image: url('http://www.androidguys.com/wp-content/uploads/2016/04/8bit_wallpaper18.jpg');
   margin: 0 auto;
@@ -19,7 +18,6 @@ body {
 }
 h1 {
   text-align: center;
-  /*background-color: blue;*/
   margin: 30px auto;
   width: 200px;
   padding: 10px;
@@ -30,25 +28,49 @@ h1 {
   margin: 0 auto;
   height: 800px;
   width: 510px;
-  /*width: 50%;*/
+
 
 }
+
 .scoreBoard {
-  /*background: red;*/
   margin: 0 auto;
   height: 50px;
   width: 210px;
-  /*width: 25%;*/
   float: right;
   border: 5px dashed fuchsia;
   font-size: 20px;
   padding: 10px;
   margin-right: 20px;
 }
+.lives{
+  margin: 0 auto;
+  height: 50px;
+  width: 210px;
+  float: left;
+  border: 5px dashed fuchsia;
+  font-size: 20px;
+  padding: 10px;
+  margin-left: 20px;
+}
+.start {
+margin: 0 auto;
+height: 140px;
+width: 740px;
+border: 10px dashed fuchsia;
+font-size: 50px;
+padding: 10px;
+position: absolute;
+z-index: 1000;
+text-align: center;
+bottom: 445px;
+right: 120px;
+}
+
+
 .gameOver{
   margin: 0 auto;
-  height: 245px;
-  width: 539px;
+  height: 150px;
+  width: 710px;
   /*width: 25%;*/
   border: 10px dashed fuchsia;
   font-size: 50px;
@@ -57,56 +79,17 @@ h1 {
   z-index: 1000;
   text-align: center;
   bottom: 445px;
-  right: 215px;
+  right: 140px;
 }
-.start {
-margin: 0 auto;
-height: 245px;
-width: 590px;
-border: 10px dashed fuchsia;
-font-size: 50px;
-padding: 10px;
-position: absolute;
-z-index: 1000;
-text-align: center;
-bottom: 445px;
-right: 200px;
-}
-
-
 
 .runway {
-  /*background-color: lightblue;*/
-  /*background-color: black;*/
   height: 800px;
   width: 102px;
-  /*width: 20%;*/
   position: relative;
   float: left;
   border-top: 9px dotted fuchsia;
-
-
 }
-#runway2 {
-  /*background-color: darkcyan;*/
-  /*background-color: black;*/
-}
-#runway3 {
-  /*background-color: blue;*/
-  /*background-color: black;*/
 
-}
-#runway4 {
-  /*background-color: darkblue;*/
-  /*background-color: black;*/
-
-}
-#runway5 {
-  /*background-color: fuchsia;*/
-  /*background-color: black;*/
-
-
-}
 .endBoard{
   width: 500px;
   height: 100px;
@@ -114,7 +97,6 @@ right: 200px;
   position: relative;
   z-index: 1;
   bottom: 200px;
-
 }
 
 .end{
@@ -130,8 +112,7 @@ right: 200px;
 }
 
 .note {
-  background: radial-gradient(fuchsia, white, fuchsia); /* Standard syntax */
-;
+  background: radial-gradient(fuchsia, white, fuchsia);
   height: 50px;
   width: 125px;
   position: absolute;
@@ -140,61 +121,3 @@ right: 200px;
   margin: 0 auto;
   margin-left: 30%;
 }
-/*.buttons{
-  margin: 0 auto;
-  height: 0px;
-  width: 0px;
-  margin-left: 65px;
-
-}*/
-
-
-/*.start,
-.easy, .medium, .hard, .score {
-  height: 100px;
-  width: 125px;
-  padding: 39px;
-  text-align: center;
-  border-radius: 23px;
-  margin: 15px auto;
-  border: 5px dotted fuchsia;
-}
-.medium {
-  padding-left: 25px;
-}
-.start {
-  padding-left: 31px;
-}
-.easy, .hard {
-  padding-left: 34px;
-}*/
-
-
-
-/*.score {
-  border:2px dotted deeppink;
-}*/
-/*.runway {
-  background-color: red;
-  border: 2px dotted red;
-  height: 850px;
-  position: relative;
-
-}*/
- /*.note {
-  background-color: silver;
-  border: 2px
-  height: 50px;
-  width: 500px;
-  position: absolute;
-}*/
-
-/*.end {
-  background-color: blue;
-  border: 2px dotted blue;
-
-  position: absolute;
-  bottom: 10%;
-  height: 100px;
-  width: 500px;
-}*/
